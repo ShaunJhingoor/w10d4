@@ -13,6 +13,6 @@ function GalleryView(props){
         <Navigate to="/" replace={true}></Navigate>
      }
     
-    return <h2>{mygallery.theme}</h2>
+    return <h2>{mygallery.labeltext}</h2>
 }
 export default GalleryView
