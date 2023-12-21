@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 function GalleryView(props){
     const data = props.data 
     const galleries = data.records 
@@ -9,6 +9,9 @@ function GalleryView(props){
             mygallery = element
        }
      })
+     if(mygallery === ""){
+        <Navigate to="/" replace={true}></Navigate>
+     }
     
     return <h2>{mygallery.theme}</h2>
 }
